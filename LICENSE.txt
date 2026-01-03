@@ -1,0 +1,45 @@
+Software License Agreement
+
+Software: QSupportViewer
+Copyright (C) 2026 Anonymous
+All Rights Reserved.
+
+1. Grant of License
+This software is provided as freeware. You may use this software for personal use free of charge.
+
+2. Copyright
+The copyright of this software belongs to Anonymous.
+
+3. Restrictions
+- You may not redistribute, sell, or rent this software without the author's permission.
+- You may not modify this software.
+- You may not reverse engineer, decompile, or disassemble this software, except to the extent necessary to debug or modify the linking with the LGPL libraries included in this software.
+
+4. Disclaimer
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING OUT OF THE USE OF THIS SOFTWARE.
+
+5. Third Party Licenses
+This software uses third-party libraries such as the Qt Toolkit (LGPL).
+Please refer to the included "LICENSE.Qt.txt" and "CREDITS.txt" for details.
+
+-----------------------------------------------------------------------
+
+【ソフトウェア利用規約 (Japanese)】
+
+1. 概要
+本ソフトウェアはフリーウェアです。個人利用の範囲で無料で使用できます。
+
+2. 著作権
+本ソフトウェアの著作権は Anonymous に帰属します。
+
+3. 禁止事項
+・無断での再配布、販売。
+・プログラムの改変。
+・リバースエンジニアリング（ただし、LGPLライブラリのリンク変更に必要な場合を除く）。
+
+4. 免責事項
+本ソフトウェアの使用によるいかなる損害についても、作者は責任を負いません。
+
+5. サードパーティ製ライブラリ
+本ソフトウェアは Qt Toolkit (LGPL) 等を使用しています。詳細は同梱の LICENSE.Qt.txt 等を参照してください。

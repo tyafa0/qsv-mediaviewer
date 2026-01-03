@@ -1,0 +1,17 @@
+QSupportViewer uses the following third-party libraries:
+
+1. Qt Toolkit (LGPL v3)
+   Copyright (C) The Qt Company Ltd.
+   https://www.qt.io/
+
+2. SDL 2.0 (zlib License)
+   Copyright (C) Sam Lantinga
+   https://www.libsdl.org/
+
+3. libmpv (LGPL v2.1+)
+   Copyright (C) the mpv developers
+   https://mpv.io/
+
+4. libopus, libogg, libvorbis (BSD-like Licenses)
+
+   Multimedia codecs used by the libraries above.
