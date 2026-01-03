@@ -1,4 +1,4 @@
-# qsv-medisviewer
+# qsv-mediaviewer
 
 QSV MediaViewer(仮称) は、音楽、画像、動画の管理と再生を統合した多機能メディアビューアです。
 
