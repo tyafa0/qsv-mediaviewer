@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OptionsDialog</class>
+ <widget class="QDialog" name="OptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>383</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="chunkSizeLabel">
+     <property name="text">
+      <string>ファイル追加時のチャンクサイズ:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QSpinBox" name="chunkSizeSpinBox">
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="fileScanLimitLabel">
+     <property name="text">
+      <string>一度に追加する最大ファイル数:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="fileScanLimitSpinBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10000</number>
+     </property>
+     <property name="singleStep">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>2000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCheckBox" name="scanSubdirectoriesCheckBox">
+     <property name="text">
+      <string>サブフォルダもスキャンする</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="preloadRangeLabel">
+     <property name="text">
+      <string>パノラマのプリロード範囲 (枚):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="preloadRangeSpinBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>64</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="progressTimerLabel">
+     <property name="text">
+      <string>再生時間表示の更新間隔 (ms):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QSpinBox" name="progressTimerSpinBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>16</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="uiTimerLabel">
+     <property name="text">
+      <string>UIプログレスバーの更新間隔 (ms):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSpinBox" name="uiTimerSpinBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>16</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QCheckBox" name="lockDocksCheckBox">
+     <property name="text">
+      <string>パネルのドッキング位置を固定する (推奨)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="syncUiStateCheckBox">
+     <property name="text">
+      <string>リストのUI設定を共有する </string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QCheckBox" name="autoUpdatePreviewsCheckBox">
+     <property name="text">
+      <string>リストプレビューを自動で更新する </string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="thmeLabel">
+     <property name="text">
+      <string>テーマ:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QComboBox" name="themeComboBox"/>
+   </item>
+   <item row="15" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QCheckBox" name="contextMenuCheckBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::FocusPolicy::ClickFocus</enum>
+     </property>
+     <property name="text">
+      <string>エクスプローラーのコンテキストメニューに項目を追加</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QComboBox" name="comboSwitchOpenFile"/>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="switchOpenFileLabel">
+     <property name="text">
+      <string>ファイルを開く/D&amp;D時のページ切替:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="comboSwitchItemClick"/>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="switchItemClickLabel">
+     <property name="text">
+      <string>リスト項目クリック時の画面切替:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QComboBox" name="comboSwitchAutoPlay"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="switchAutoPlayLabel">
+     <property name="text">
+      <string>自動再生/連続再生時の画面切替:</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>OptionsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>OptionsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

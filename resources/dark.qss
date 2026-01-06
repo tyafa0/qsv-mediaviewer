@@ -1,0 +1,324 @@
+/* ===================================================================
+ * ダークモード スタイルシート (dark.qss)
+ * =================================================================== */
+
+/* --- 全体の基本設定 --- */
+QWidget {
+    background-color: #2b2b2b;
+    color: #dadada;
+    border-color: #555555;
+}
+
+QMainWindow, QDialog {
+    background-color: #2b2b2b;
+}
+
+#mediaView {
+    border: 1px solid #555555;
+}
+
+/* --- メニューバー & メニュー --- */
+QMenuBar {
+    background-color: #1e1e1e; /* ツールバーと同じ背景色 */
+    color: #C0C0C0;
+    border-bottom: 1px solid #555555; /* 下に境界線を追加 */
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 4px 8px;
+}
+
+/* マウスオーバー時 or 選択時(メニューが開いている時) */
+QMenuBar::item:selected, QMenuBar::item:hover {
+    background-color: #5f5f8f; /* 濃い紫色の背景 */
+}
+
+/* ドロップダウンメニュー本体 */
+QMenu {
+    background-color: #2b2b2b; /* ウィンドウと同じ背景色 */
+    color: #C0C0C0;
+    border: 1px solid #555555;
+}
+
+/* ドロップダウンメニュー内の選択項目 */
+QMenu::item:selected {
+    background-color: #4f4f4f; /* 選択時の背景色 */
+    color: #f6f6f6;            /* 選択時の文字色を白に */
+}
+
+/* メニュー内の区切り線 */
+QMenu::separator {
+    height: 1px;
+    background-color: #555555;
+    margin: 4px 0px;
+}
+
+/* --- ツールバー --- */
+QToolBar {
+    background-color: #1e1e1e;
+    padding: 2px;
+    border: none;
+}
+
+QToolBar QToolButton {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 2px;
+}
+
+QToolBar QToolButton:checked {
+    background-color: #62628f;
+    padding: 2px; /* padding固定 */
+    border: 1px solid #62628f;
+    border-radius: 3px;
+}
+
+/* --- ボタン (一般) --- */
+QPushButton {
+    background-color: #232323;
+    border: 1px solid #353535;
+    padding: 4px;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #5f5f8f;
+}
+QPushButton:pressed {
+    background-color: #3c3c3c;
+}
+QPushButton:checked {
+    background-color: #ff69b4;
+    border: 1px solid #ff69b4;
+}
+QPushButton:disabled {
+    background-color: #3f3f3f; /* 通常より暗い背景 */
+    color: #777777;            /* 薄暗い文字色 */
+    border: 1px solid #444444; /* 枠線も少し暗く */
+}
+
+/* mediaView上の透明ボタン */
+QPushButton#toggleLayoutDirectionButton,
+QPushButton#toggleFitModeButton,
+QPushButton#togglePanoramaButton {
+    background-color: transparent;
+    border: none;
+}
+
+/* --- ドックウィジェット --- */
+QDockWidget {
+    background-color: #303030;
+    color: #C0C0C0;
+}
+QDockWidget::title {
+    background-color: #4f4f4f;
+    padding: 4px;
+    border: 1px solid #555555;
+}
+
+/* --- タブウィジェット --- */
+QTabWidget::pane { /* タブの中身が表示される領域 */
+    border-top: 1px solid #555555;
+}
+
+QTabBar::tab {
+    background-color: #3c3c3c; /* 選択されていないタブの背景色 */
+    color: #C0C0C0;            /* 選択されていないタブの文字色 */
+    border: 1px solid #555555;
+    border-bottom: none;       /* 下枠線を消して一体感を出す */
+    padding: 2px;
+    min-width: 80px;           /* タブの最小幅 */
+}
+
+QTabBar::tab:hover {
+    background-color: #4f4f4f; /* マウスオーバー時の背景色 */
+}
+
+QTabBar::tab:selected {
+    background-color: #2b2b2b; /* 選択されているタブの背景色 (ウィンドウと同じ) */
+    color: #ffffff;            /* 選択されているタブの文字色 (より明るく) */
+    border-color: #555555;
+    /* 選択されたタブの下枠線を背景色と同じにして、paneと繋がって見えるようにする */
+    border-bottom-color: #2b2b2b;
+}
+
+/* 閉じられるタブの「×」ボタン */
+QTabBar::close-button {
+    subcontrol-position: right;
+    subcontrol-origin: padding;
+    border: none;
+    border-radius: 2px;
+}
+QTabBar::close-button:hover {
+    background-color: #6a6a6a;
+}
+
+/* --- 入力系ウィジェット --- */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: #3c3c3c;
+    color: #C0C0C0;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 2px;
+}
+QComboBox::drop-down {
+    border: none;
+}
+
+/* --- リストとツリー --- */
+QListWidget, QTreeView {
+    background-color: #3c3c3c;
+    border: 1px solid #555555;
+}
+QListWidget::item:selected, QTreeView::item:selected {
+    background-color: #ff69b4;
+    color: white;
+}
+QHeaderView::section {
+    background-color: #4f4f4f;
+    border: 1px solid #555555;
+    padding: 4px;
+}
+
+/* --- スライダー: プログレス (progressSlider) --- */
+#progressSlider::groove:horizontal {
+    background: #404040;     /* アプリ背景(#2b2b2b)よりやや明るい灰色 */
+    height: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+#progressSlider::handle:horizontal {
+    background: transparent;
+    border: none;
+    width: 16px;
+    margin: -2px 0;
+}
+
+#progressSlider::sub-page:horizontal {
+    background: #7b68ee;
+    height: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* --- スライダー: ボリューム (volumeSlider) --- */
+#volumeSlider::groove:horizontal {
+    border: 1px solid #555555; /* 枠線を暗く */
+    height: 12px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #b4ffb4, stop:0.8 #00c800,
+                                stop:0.9 #ffff77, stop:0.96 #ffaa00, stop:1 #ff4444);
+    /* グラデーションは機能なので維持 */
+}
+#volumeSlider::handle:horizontal {
+    background: transparent;
+    border: none;
+}
+#volumeSlider::sub-page:horizontal {
+    background: transparent;
+    border: none;
+}
+#volumeSlider::add-page:horizontal {
+    background: #555555; /* グラデーションを隠すマスク色を暗く */
+    border: none;
+    height: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+}
+
+/* --- スライダー: 画像表示 (viewControlSlider) --- */
+#viewControlSlider::groove:horizontal {
+    background: transparent;
+    height: 8px;              /* 高さを8pxに設定 */
+    border: none;             /* 枠線なし */
+    border-radius: 0px;       /* 角丸なし */
+}
+
+#viewControlSlider::handle:horizontal {
+    background: #ff69b4;      /* ピンク */
+    width: 12px;              /* 横長の長方形 */
+    height: 8px;              /* グルーブと同じ高さ */
+    margin: 0px;              /* 余白なし */
+    border: none;
+    border-radius: 0px;
+}
+
+#viewControlSlider::handle:horizontal:hover {
+    background: #ff8cc2;      /* ホバー時は少し明るく */
+}
+
+#viewControlSlider::sub-page:horizontal {
+    background: #7b68ee;      /* 紫 (Darkモード用の色) */
+    height: 8px;
+    border: none;
+    border-radius: 0px;
+}
+
+#viewControlSlider::add-page:horizontal {
+    background: #2e2e2e;      /* 未再生部分 (Darkモード用の背景色) */
+    height: 8px;
+    border: none;
+    border-radius: 0px;
+}
+
+/* ===================================================================
+ * カスタムタイトルバー設定 (Dark) - 26px対応版
+ * =================================================================== */
+
+/* タイトルバー本体 */
+#CustomTitleBar {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #555555;
+}
+
+#CustomTitleBar QLabel {
+    color: #dadada;
+    background: transparent;
+    border: none;
+    padding-left: 5px;
+    margin: 0px;
+}
+
+/* --- メニューバー --- */
+#CustomTitleBar QMenuBar {
+    background-color: transparent;
+    border: none;
+    /* ★修正: 高さ制限を削除 */
+}
+
+#CustomTitleBar QMenuBar::item {
+    background-color: transparent;
+    /* パディングは少なめのまま維持 */
+    padding: 8px 8px;
+
+        margin: 0px;
+        border: none;
+}
+
+#CustomTitleBar QMenuBar::item:selected,
+#CustomTitleBar QMenuBar::item:hover {
+    background-color: #5f5f8f;
+}
+
+/* --- ウィンドウ操作ボタン --- */
+#CustomTitleBar QToolButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    /* ★修正: C++側で制御するため、ここでの高さ指定は不要だが、
+       念のため枠いっぱいに広がるように設定 */
+    height: 100%;
+}
+
+#TitleBarCloseBtn:hover {
+    background-color: #e81123;
+}
+#TitleBarMinBtn:hover,
+#TitleBarMaxBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

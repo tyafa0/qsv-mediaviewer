@@ -1,0 +1,5 @@
+# Qt/C++ build artifacts
+/build/
+/3rdparty/
+*.user
+*.pro.user

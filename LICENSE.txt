@@ -1,6 +1,6 @@
 Software License Agreement
 
-Software: QSupportViewer
+Software: QSV MediaViewer
 Copyright (C) 2026 Anonymous
 All Rights Reserved.
 
